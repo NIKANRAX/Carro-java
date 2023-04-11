@@ -1,6 +1,7 @@
 public class Carro {
     public static final String VERMELHO = "Vermelho";
     public static final String CHASSI = "2H2XS59BWDY987665";
+    public static final String PLACA = "NPB6594";
     private Integer quantidadeDePneus;
     private Integer quantidadeDeCalotas;
     private Integer quantidadeParafusosPneus;
@@ -9,6 +10,7 @@ public class Carro {
     private String cor;
     private Integer anoFabricacao;
     private Integer combustivel;
+    private String placa;
     public Carro (Integer quantidadeDePneus, Integer anoFabricacao, Integer combustivel){
         setQuantidadeDePneus(quantidadeDePneus);
         setAnoFabricacao(anoFabricacao);
@@ -59,22 +61,27 @@ public class Carro {
     public void setAnoFabricacao(Integer anoFabricacao) {
         this.anoFabricacao = anoFabricacao;
     }
-
     public Integer getCombustivel() {
         return combustivel;
     }
     public void setCombustivel(Integer combustivel) {
         this.combustivel = combustivel;
     }
-
+    public String getPlaca() {
+        return placa;
+    }
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
     public void imprimiValores(){
-        System.out.println("Quantidade Pneus " + getQuantidadePneus());
-        System.out.println("Quantidade Calotas " + getQuantidadeDeCalotas());
+        System.out.println("Quantidades de Pneus " + getQuantidadePneus());
+        System.out.println("Quantidades de Calotas " + getQuantidadeDeCalotas());
         System.out.println("Quantidade de Parafusos " + getQuantidadeParafusosPneus());
         System.out.println("Cor do veículo " + getCor());
         System.out.println("Número de portas " + getNumeroDePortas());
         System.out.println("Número do chassi " + getChassi());
         System.out.println("Ano de fabricação " + getAnoFabricacao());
         System.out.println("Nível do combustivel " + getCombustivel() + " Litros");
+        System.out.println("Placa do Veículo " + getPlaca());
     }
 }
